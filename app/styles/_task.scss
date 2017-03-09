@@ -1,0 +1,219 @@
+@import "conf/color";
+@import "util/mixin";
+@import "util/func";
+
+.task-body {
+  @include rems(padding, 10, 5);
+  @include rems(border-radius, 2);
+  background: $white;
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+
+  &:hover {
+    .check {
+      opacity: 1;
+    }
+
+    .contractors {
+      .person,
+      .count {
+        + .add {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .check {
+    @include size(#{px2rem(14)});
+    @include rems(border-radius, 2);
+    @include rems(width, 16);
+    @include rems(margin, 4, 5, 0, 0);
+    @include trans(border-color, background, opacity);
+    cursor: pointer;
+    flex-shrink: 0;
+    background: none;
+    border: 1px solid $tasks-check-border;
+    opacity: 0;
+    line-height: 1;
+
+    path {
+      @include trans(opacity);
+      fill: $white;
+      opacity: 0;
+    }
+
+    &.selected {
+      background: $tasks-checked;
+      border-color: $tasks-checked-border;
+      opacity: 1;
+
+      path {
+        opacity: 1;
+      }
+    }
+  }
+
+  .title {
+    flex-grow: 1;
+  }
+
+  .status {
+    @include rems(margin, 0, 5);
+    @include rems(width, 110);
+    flex-shrink: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @each $k, $v in $tasks-status {
+    .status-#{$k} {
+      color: $v;
+    }
+  }
+
+  .contractors {
+    @include rems(width, 89);
+    position: relative;
+    flex-shrink: 0;
+    text-align: right;
+
+    .person {
+      border: 2px solid $white;
+      display: inline-block;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .person,
+    .count {
+      + .add {
+        @include trans(opacity);
+        opacity: 0;
+      }
+    }
+
+    .person + .person,
+    .add {
+      @include rems(margin-left, -12);
+    }
+
+    .person,
+    .add {
+      @include size(#{px2rem(24)});
+      @include rems(border-radius, 24);
+      vertical-align: middle;
+    }
+
+    .add {
+      background: $tasks-add-bg;
+      border: 2px solid $tasks-add-bg;
+
+      path {
+        fill: $tasks-add-fg;
+      }
+    }
+
+    .count {
+      color: $tasks-contractors-count;
+      font-size: .75rem;
+      display: inline-block;
+
+      + .add {
+        @include rems(top, 3);
+        position: absolute;
+        right: 0;
+      }
+
+    }
+  }
+
+  .comments {
+    @include size(#{px2rem(20)});
+    @include rems(margin-left, 12);
+    font-size: .67rem;
+    position: relative;
+    text-align: center;
+    line-height: 1.5;
+
+    .count {
+      height: 100%;
+      position: relative;
+      line-height: 1.75;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    path {
+      fill-opacity: 0;
+      fill: $tasks-comment-unread;
+      stroke: $tasks-comment;
+      transform: translate(#{px2rem(24)}, 0) scale(-1, 1);
+    }
+
+    &.unread {
+      color: $white;
+
+      path {
+        fill-opacity: 1;
+        stroke-opacity: 0;
+      }
+    }
+  }
+
+  .comments,
+  .tag {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .tag {
+    @include rems(padding, 2, 6, 3, 6);
+    @include rems(border-radius, 2);
+    @include rems(margin-left, 12);
+    font-size: .75rem;
+    line-height: 1;
+
+    @each $k, $v in $tasks-tags {
+      &.tag-#{$k} {
+        background: nth($v, 1);
+        color: nth($v, 2);
+      }
+    }
+  }
+}
+
+.task-list .task {
+  display: flex;
+
+  &.checked {
+    .check {
+      border: 1px solid $tasks-checked-check-border;
+      background: $tasks-checked;
+
+      path {
+        opacity: 1;
+      }
+    }
+  }
+
+  & + .task {
+    margin-top: 1px;
+  }
+
+  .deadline {
+    @include rems(margin-left, 10);
+    @include rems(width, 80);
+    color: $tasks-deadline;
+    font-size: .75rem;
+  }
+}

@@ -1,0 +1,32 @@
+@import "conf/color";
+@import "conf/size";
+@import "conf/animation";
+@import "util/mixin";
+@import "util/func";
+
+.topbar {
+  @include rems(padding, $topbar-padding-v, $margin-right);
+  position: relative;
+  width: 100%;
+  background: $white;
+  box-shadow: 0 0 #{px2rem(12)} 0 $shadow;
+  color: $topbar-text;
+  align-self: flex-start;
+  z-index: 1;
+
+  // menu button
+  > .btn {
+    @include rems(margin-right, 14);
+
+    svg path {
+      @include trans(fill);
+      fill: $topbar-menu;
+    }
+
+    &:hover {
+      svg path {
+        fill: $black;
+      }
+    }
+  }
+}

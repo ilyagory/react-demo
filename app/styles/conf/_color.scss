@@ -1,0 +1,38 @@
+$white: #fff;
+$black: #000;
+// topbar shadow color
+$shadow: rgba($black, .5);
+// sidebar
+$sidebar-bg: #2b3b54;
+$sidebar-divider: rgba($white, .2);
+$sidebar-notify: #348de1;
+// tobar
+$topbar-text: #303030;
+$topbar-menu: #999;
+// task list
+$tasks-bg: #eff0f2;
+$tasks-group-title: #8c8d8f;
+$tasks-border: #d7d8da;
+$tasks-id: #9e9fa1;
+$tasks-check-border: #c6c6c6;
+$tasks-checked: #4590e3;
+$tasks-checked-border: #618cbf;
+$tasks-checked-check-border: #5d8bbd;
+$tasks-contractors-count: #a6a6a6;
+$tasks-status: (
+        test: #f1c797,
+        done: #8e7ca2,
+        accept: #b09d8f
+);
+// "add contractor" button
+$tasks-add-bg: #efefef;
+$tasks-add-fg: #6d6d6d;
+$tasks-deadline: #5c5c5c;
+$tasks-comment: #c4c4c4;
+$tasks-comment-unread: #4a8de4;
+$tasks-tags: (
+        'red':(#f44564, $white),
+        'green':(#53a80f, $white),
+        'jade':(#4fab86, $white),
+        'gray':(#e0e0e0, #7b7b7b)
+);

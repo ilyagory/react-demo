@@ -1,0 +1,39 @@
+@import "conf/color";
+@import "util/mixin";
+
+.task-list {
+  @include rems(padding, 30, 10, 0, 10);
+  flex: 1;
+  background: $tasks-bg;
+  min-height: 100vh;
+  position: relative;
+
+  .tasks-id {
+    @include rems(left, 10);
+    position: absolute;
+
+    .marker {
+      @include rems(margin-left, 7);
+    }
+
+    span:first-child {
+      display: inline-block;
+      min-width: 1.5rem; // 3 letters
+      text-align: right;
+    }
+
+  }
+
+  > .task-group {
+    @include rems(margin-left, 58);
+  }
+
+  .task-group > .tasks-id {
+    @include rems(margin-top, 4);
+  }
+
+  .task > .tasks-id {
+    @include rems(margin-top, 12);
+  }
+
+}

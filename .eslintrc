@@ -1,0 +1,146 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "arrow-body-style": [
+      "error",
+      "as-needed"
+    ],
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "consistent-return": "error",
+    "indent": [
+      "warn",
+      4,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "prefer-rest-params": 1,
+    "prefer-const": 1,
+    "class-methods-use-this": 1,
+    "spaced-comment": 1,
+    "react/jsx-first-prop-new-line": 1,
+    "react/jsx-closing-bracket-location": 1,
+    "prefer-arrow-callback": 1,
+    "no-tabs": 0,
+    "key-spacing": [
+      "warn",
+      {
+        "beforeColon": false,
+        "afterColon": true,
+        "mode": "minimum"
+      }
+    ],
+    "linebreak-style": [
+      "error",
+      "windows"
+    ],
+    "max-len": [
+      "warn",
+      {
+        "code": 120,
+        "tabWidth": 4,
+        "ignoreTrailingComments": true,
+        "ignoreUrls": true
+      }
+    ],
+    "no-mixed-operators": [
+      "warn",
+      {
+        "allowSamePrecedence": true
+      }
+    ],
+    "no-multi-spaces": [
+      "error",
+      {
+        "exceptions": {
+          "VariableDeclarator": true
+        }
+      }
+    ],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    "no-underscore-dangle": "off",
+    "no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "no-plusplus": [
+      "warn",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "no-confusing-arrow": "off",
+    "no-alert": "off",
+    "object-curly-spacing": "off",
+    "one-var": [
+      "error",
+      "never"
+    ],
+    "prefer-template": "warn",
+    "quote-props": [
+      "warn",
+      "as-needed",
+      {
+        "keywords": true,
+        "unnecessary": false
+      }
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "unicode-bom": [
+      "off"
+    ],
+    "radix": [
+      "error",
+      "as-needed"
+    ],
+    // ----------------------------
+    // Import settings
+    // ----------------------------
+    "import/prefer-default-export": "warn",
+    // ----------------------------
+    // JSX a11y settings
+    // ----------------------------
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/href-no-hash": "off",
+    // ----------------------------
+    // React settings
+    // ----------------------------
+    "react/jsx-filename-extension": "off",
+    "react/jsx-indent": [
+      "warn",
+      4
+    ],
+    "react/jsx-indent-props": [
+      "warn",
+      4
+    ],
+    "react/jsx-boolean-value": "off",
+    "react/prefer-es6-class": "warn",
+    "react/prefer-stateless-function": "warn",
+    "react/sort-comp": "warn",
+    "react/forbid-prop-types": "off",
+    "react/no-array-index-key": "warn"
+  }
+}
