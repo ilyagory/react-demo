@@ -39,7 +39,7 @@
     ],
     "linebreak-style": [
       "error",
-      "windows"
+      "unix"
     ],
     "max-len": [
       "warn",

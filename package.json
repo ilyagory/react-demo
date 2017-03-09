@@ -1,7 +1,7 @@
 {
-  "name": "Synkra-WC",
+  "name": "react-demo",
   "version": "1.0.0",
-  "description": "Synkra web client",
+  "description": "demo project w/ react, react-redux, react-router(& redux), wepack (v1)",
   "main": "index.js",
   "scripts": {
     "test": "",
@@ -14,10 +14,10 @@
     "react",
     "redux"
   ],
-  "author": "tssoft.ru",
-  "license": "proprietary",
+  "author": "ilya goryachev <ilya.gory@yandex.ru>",
+  "license": "WTFPL",
   "private": true,
-  "repository": "https://bitbucket.org/tssoftinc/synkra",
+  "repository": "https://github.com/ilyagory/react-demo",
   "dependencies": {
     "babel-polyfill": "^6.8.0",
     "file-loader": "^0.9.0",
