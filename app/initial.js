@@ -1,7 +1,7 @@
 export default {
     //
     sidebar: {
-        locked: false,
+        locked: true,
         visible: true
     },
     layout: {
@@ -14,7 +14,7 @@ export default {
         'Hey, pal'
     ],
     projects: [
-        {id: 1, title: 'НеРадио'},
+        {id: 1, title: 'Super project'},
         {id: 2, title: 'Мобильное приложение', parent: 1},
         {id: 3, title: 'Админка', parent: 2},
         {id: 10, title: 'Some stuff', parent: 2},
@@ -22,7 +22,7 @@ export default {
         {id: 11, title: 'Клиент', parent: 3},
         {id: 5, title: 'Администрирование', parent: 4, open: true},
         {id: 6, title: 'Настройка сервера', parent: 4},
-        {id: 7, title: 'Inanomo'},
+        {id: 7, title: 'Site1'},
         {id: 8, title: 'Лендинг', parent: 7},
         {id: 9, title: 'Личный кабинет', parent: 7}
     ],
